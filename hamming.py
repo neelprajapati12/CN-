@@ -24,7 +24,8 @@ for i in range(m):
     parity_sum = sum(hamming[k] for k in range(len(hamming)) if (k + 1) & (p + 1) and hamming[k] is not None)
     hamming[p] = parity_sum % 2 if parity == "even" else (parity_sum + 1) % 2
 
-print("Generated Hamming Code:", ''.join(map(str, hamming)))
+# print("Generated Hamming Code:", ''.join(map(str, hamming)))
+print("Hamming code is ",hamming)
 
 # Input transmitted code
 transmitted = list(map(int, input("Enter the transmitted Hamming code: ")))
